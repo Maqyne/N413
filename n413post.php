@@ -1,6 +1,6 @@
 <?php
         include("n413connect.php");
-        
+
         function sanitize($item){
             global $link;
             $item = html_entity_decode($item);
@@ -17,14 +17,14 @@
 		$phoneNumber = "";
         $comment = "";
         
-        if(isset($_POST["firstName"])) { $name = sanitize($_POST["firstName"]); }
-		if(isset($_POST["lastName"])) { $name = sanitize($_POST["lastName"]); }
+        if(isset($_POST["firstName"])) { $firstName = sanitize($_POST["firstName"]); }
+		if(isset($_POST["lastName"])) { $lastName = sanitize($_POST["lastName"]); }
     	if(isset($_POST["email"])) { $email = sanitize($_POST["email"]); }
-		if(isset($_POST["phoneNumber"])) { $email = sanitize($_POST["phoneNumber"]); }
-        if(isset($_POST["comment"])) { $comment = sanitize($_POST["comment"]); }
+		if(isset($_POST["phoneNumber"])) { $phoneNumber = sanitize($_POST["phoneNumber"]); }
+        if(isset($_POST["comment"])) { $comment = sanitize($_POST["comment"]); }		
         
         $sql = "INSERT INTO `form_responses` (`id`, `firstName`, `lastName`, `email`, `phoneNumber`, `comment`, `timestamp`) 
-		VALUES (NULL, '".$firstName."', '".$lastName."', '".$email."', '".$phoneNumber."', '".$comment."', current_timestamp())";
+				VALUES (NULL, '".$firstName."', '".$lastName."', '".$email."', '".$phoneNumber."', '".$comment."', current_timestamp())";
 
 
 
