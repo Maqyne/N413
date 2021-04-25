@@ -20,7 +20,7 @@
 				First Name: <input type="text" id="firstName" name="firstName" value="" placeholder="Enter First Name" required/><br/>
 				Last Name: <input type="text" id="lastName" name="lastName" value="" placeholder="Enter Last Name" required/><br/>
 				E-mail: <input type="email" id="email" name="email" value="" placeholder="Enter E-mail" required/><br/>
-				Phone Number: <input type="phone" id="phoneNumber" name="phoneNumber" value="" placeholder="Enter Phone Number" required/><br/>
+				Phone Number: <input type="text" id="phoneNumber" name="phoneNumber" value="" placeholder="Enter Phone Number" required/><br/>
 				Comment: <textarea id="comment" name="comment" value="" placeholder="Add your comment here:"></textarea><br/>
 				<input type="submit" id="submit" value="Submit" />
 			</div>        
