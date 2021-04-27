@@ -91,12 +91,7 @@
                 VALUES (NULL, '".$firstName."', '".$lastName."', '".$nickName."', '".$phoneNumber."', '".$email."', '".$username."',  '".$password."', '".$role."')"; 
         $result = mysqli_query($link, $sql); 
         
-        $user_id = mysqli_insert_id($link);
-        if($user_id){
-            session_start();
-            $_SESSION["user_id"] = $user_id;
-            $_SESSION["role"] = $role;
-        } 
+         
     }  //if( ! $messages["errors"])  
     
     if(isset($_SESSION["user_id"])){

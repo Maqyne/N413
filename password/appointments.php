@@ -25,7 +25,7 @@ $appointments = array();
     </div> <!-- /.row --> 
     
     <?php 
-    if($_SESSION["role"] >= 0){
+    if(isset($_SESSION["user_id"])){
         foreach($appointments as $appointment){
             echo'
             <div class="row mt-3">
