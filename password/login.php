@@ -48,11 +48,14 @@
     function right_navbar_update(role){
         var html = "";
         if (role > 0) {
-            html =  '<li id="appointments_item" class="nav-item">'+
-                    '<a id="appointments_link" class="nav-link" href="appointments.php">appointments</a>'+
+            html =  '<li id="register_item" class="nav-item">'+
+                    '<a id="register_link" class="nav-link" href="register.php">register</a>'+
                     '</li>';
         }
-			
+		html +=  '<li id="appointments_item" class="nav-item">'+
+                    '<a id="appointments_link" class="nav-link" href="appointments.php">appointments</a>'+
+                    '</li>';
+
         html += '<li id="logout_item" class="nav-item">'+
                 '<a id="logout_link" class="nav-link" href="logout.php">logout</a>'+
                 '</li>';		
