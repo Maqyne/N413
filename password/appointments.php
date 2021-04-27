@@ -25,7 +25,7 @@ $appointments = array();
     </div> <!-- /.row --> 
     
     <?php 
-    if($_SESSION["role"] > 0){
+    if($_SESSION["role"] >= 0){
         foreach($appointments as $appointment){
             echo'
             <div class="row mt-3">
@@ -40,7 +40,7 @@ $appointments = array();
     } else{
         echo'
         <div class="row mt-3">  
-            <div class="col-12 text-center"><h3>You are not authorized to view the messages.</h3></div>
+            <div class="col-12 text-center"><h3>You are not authorized to view the appointments.</h3></div>
         </div> <!-- /.row -->';
     } //else if       
     ?>

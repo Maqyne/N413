@@ -4,7 +4,11 @@
 <style>
     .error_msg { display:none;color:#C00; }
 </style>
-<div class="container-fluid">
+
+<?php 
+    if($_SESSION["role"] > 0){
+            echo'
+            <div class="container-fluid">
     <div id="headline" class="row mt-5">
         <div class="col-12 text-center">
             <h2>Black Orchid Staff Registration</h2>
@@ -38,7 +42,17 @@
             <div class="mt-5"><button type="submit" id="submit" class="btn btn-primary float-right">Submit</button></div>
         </div>  <!-- /#form-container -->
     </div>  <!-- /.row -->
-</form>
+</form>';
+    } else{
+        echo'
+        <div class="row mt-3">  
+            <div class="col-12 text-center"><h3>You are not authorized to access this page.</h3></div>
+        </div> <!-- /.row -->';
+    } //else if       
+    ?>
+
+
+
 </body>
 <script>
     var this_page = "login";
