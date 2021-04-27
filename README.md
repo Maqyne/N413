@@ -6,4 +6,6 @@
 
 [The Site](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/site/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/site/index.php
 
-[The Site](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/account/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/account/index.php
+[The Account](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/account/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/account/index.php
+
+[The Password](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/password/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/password/index.php
