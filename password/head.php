@@ -45,19 +45,21 @@
                         if(isset($_SESSION["user_id"])){
                            if($_SESSION["role"] > 0){
                               echo '
-                              <li id="appointments_item" class="nav-item">
-                                 <a appointments_link class="nav-link" href="appointments.php">appointments</a>
-                              </li>';
+                              <li id="register_item" class="nav-item">
+                                 <a id="register_link" class="nav-link" href="register.php">Register</a>
+                              </li>  
+                              ';
                           }
                               echo '
+                              <li id="appointments_item" class="nav-item">
+                                 <a appointments_link class="nav-link" href="appointments.php">appointments</a>
+                              </li>
                               <li id="logout_item" class="nav-item">
                                  <a id="logout_link" class="nav-link" href="logout.php">logout</a>
                               </li>';
                         }else{
                               echo '  
-                              <li id="register_item" class="nav-item">
-                                 <a id="register_link" class="nav-link" href="register.php">Register</a>
-                              </li>  
+                              
                               <li id="login_item" class="nav-item">
                                  <a id="login_link" class="nav-link" href="login.php">login</a>
                               </li>';
