@@ -9,3 +9,5 @@
 [The Account](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/account/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/account/index.php
 
 [The Password](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/password/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/password/index.php
+
+[The Reset](https://in-info-web4.informatics.iupui.edu/~kylperry/n413/reset/index.php) : https://in-info-web4.informatics.iupui.edu/~kylperry/n413/reset/index.php
