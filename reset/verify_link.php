@@ -1,9 +1,15 @@
 <?php
     include("n413connect.php");
 
+    function console_log( $data ){   
+        echo '<script>';
+        echo 'console.log('. json_encode( $data ) .')';
+        echo '</script>';
+      }
+
     $user_id = 0;
     $user_message = "";
-	
+
     $token = "";
     if(isset($_GET["token"])){
         $token = html_entity_decode($_GET["token"]);
@@ -39,7 +45,7 @@
         case "valid":
             $user_message .='
             <div id="user_message" class="success">
-                <p>Please enter a new password to use with your account.<br/>It must have at least 8 characters.</p>
+                <p>Please enter a new password.<br/>It must have at least 8 characters.</p>
                 <form id="password_form" name="password_form" class="form-horizontal" method="" action="" >
                     <div class="row">
                         <div class="col-3"></div> <!--  spacer -->
@@ -64,7 +70,19 @@
                 </div>';
         break;
         case "no_record":
+            $user_message .='
+                <div class="error">
+                    <p>Sorry, we have no record matching this account.</p>
+                    <p>Your password cannot be reset using this link.</p>
+                </div>';
+        break;
         case "no_token":
+            $user_message .='
+                <div class="error">
+                    <p>Sorry, we were not able to find the token in your link.</p>
+                    <p>Your password cannot be reset using this link.</p>
+                </div>';
+        break;
         default:
             $user_message .='
                 <div class="error">
@@ -101,7 +119,7 @@
     $( "#password_form" ).submit(function( event ) {
         event.preventDefault();
         $.post("update_password.php",
-            {id:<?=$user_id?>, password:$("#password").val(), token:<?=$token?>},
+        {id:<?=$user_id?>, password:$("#password").val(), token:"<?=$token?>"},
             function(data){
                 //reset any previous error messages
                 $("#password_error").html("");
@@ -125,3 +143,6 @@
 </script>
                     
 </html>
+
+
+

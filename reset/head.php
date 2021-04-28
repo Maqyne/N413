@@ -6,7 +6,7 @@
             <title>Black Orchid</title>
             <link href="css/bootstrap.min.css" rel="stylesheet">
     
-            <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
+            <script src="js/jquery-3.6.0.min.js" type="application/javascript"></script>
             <script src="js/bootstrap.min.js" type="application/javascript"></script>
             <script src="js/bootstrap.min.js.map" type="application/javascript"></script>
             <script>
