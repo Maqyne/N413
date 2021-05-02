@@ -17,30 +17,23 @@ $firstName = "";
 $lastName = "";
 $email = "";
 $phoneNumber = "";
-$date = "";
-$hour = "";
-$minute = "";
-$am_pm = "";
+$datetime = "";
 $comment = "";
 
 if(isset($_POST["firstName"])) { $firstName = sanitize($_POST["firstName"]); }
 if(isset($_POST["lastName"])) { $lastName = sanitize($_POST["lastName"]); }
 if(isset($_POST["email"])) { $email = sanitize($_POST["email"]); }
 if(isset($_POST["phoneNumber"])) { $phoneNumber = sanitize($_POST["phoneNumber"]); }
-if(isset($_POST["date"])) { $date = sanitize($_POST["date"]); }
-if(isset($_POST["hour"])) { $hour = sanitize($_POST["hour"]); }
-if(isset($_POST["minute"])) { $minute = sanitize($_POST["minute"]); }
-if(isset($_POST["am_pm"])) { $am_pm = sanitize($_POST["am_pm"]); }
+if(isset($_POST["datetime"])) { $datetime = sanitize($_POST["datetime"]); }
 if(isset($_POST["comment"])) { $comment = sanitize($_POST["comment"]); }		
 
-$sql = "INSERT INTO `bookings` (`id`, `firstName`, `lastName`, `email`, `phoneNumber`, `date`, `hour`, `minute`, `am_pm`, `comment`, `timestamp`) 
-        VALUES (NULL, '".$firstName."', '".$lastName."', '".$email."', '".$phoneNumber."', '".$date."', '".$hour."', '".$minute."', '".$am_pm."', '".$comment."', current_timestamp())";
+$sql = "INSERT INTO `bookings` (`id`, `firstName`, `lastName`, `email`, `phoneNumber`, `datetime`, `comment`, `timestamp`, `checkin`) 
+        VALUES (NULL, '".$firstName."', '".$lastName."', '".$email."', '".$phoneNumber."', '".$datetime."', '".$comment."', current_timestamp(), 0)";
 
 
 
 $result = mysqli_query($link, $sql);
 ?>
-
 <div class="container-fluid">
     <div id="headline" class="row mt-5">
         <div class="col-12 text-center">
